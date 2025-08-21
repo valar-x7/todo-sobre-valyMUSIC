@@ -1,0 +1,79 @@
+body {
+      background: linear-gradient(135deg, #0f0f1a, #1a1a2e);
+      font-family: 'Orbitron', sans-serif;
+      color: hsl(229, 92%, 80%);
+      margin: 0;
+      padding: 0;
+    }
+
+    .valy-player {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(25, 25, 40, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffff88;
+      text-align: center;
+    }
+
+    .song-title {
+      font-size: 1.5em;
+      color: #168bc2;
+      margin-bottom: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .meta-info {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    audio {
+      width: 200px;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background-color: #282828;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button {
+      color: #720788;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+      color: #660c6e;
+    }
+
+    audio::-webkit-media-controls-timeline {
+      background-color: #4f0692;
+      border-radius: 5px;
+    }
+
+    audio::-webkit-media-controls-volume-slider-container {
+      color: #8a0d7f;
+    }
+
+    .upload-section {
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #1a1a2e;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #4c0a8a;
+    }
+
+    .upload-section input,
+    .upload-section button {
+      margin: 10px;
+      padding: 10px;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #b311aa;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+    
