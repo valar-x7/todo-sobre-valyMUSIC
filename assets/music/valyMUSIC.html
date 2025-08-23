@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>valyMUSIC</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎧 valyMUSIC</h1>
+  </header>
+
+  <main>
+    <div id="player"></div>
+  </main>
+
+  <script type="module" src="./js/player.js"></script>
+  <style>
+  body {
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #00f7ff;
+}
+
+#player {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.song {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00f7ff;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.song img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+</style>
+<script>
+    const player = document.getElementById('player');
+
+fetch('https://valar-x7.github.io/todo-sobre-valyMUSIC/')
+  .then(res => res.json())
+  .then(songs => {
+    songs.forEach(song => {
+      if (!song.src || !song.cover) return;
+
+      const container = document.createElement('div');
+      container.className = 'song';
+
+      const cover = document.createElement('img');
+      cover.src = song.cover;
+      cover.alt = song.title;
+
+      const title = document.createElement('h3');
+      title.textContent = `${song.artist} — ${song.title}`;
+
+      const audio = document.createElement('audio');
+      audio.controls = true;
+      audio.src = song.src;
+
+      container.appendChild(cover);
+      container.appendChild(title);
+      container.appendChild(audio);
+      player.appendChild(container);
+    });
+  })
+  .catch(err => {
+    player.innerHTML = `
+      <div style="color: red; text-align: center;">
+        <p>Error al cargar canciones: ${err.message}</p>
+      </div>
+    `;
+  });
+</script>
+</body>
+</html>
+ https://valar-x7.github.io/todo-sobre-valyMUSIC/
