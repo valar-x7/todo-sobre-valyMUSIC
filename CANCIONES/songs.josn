@@ -1,14 +1,8 @@
 [
   {
-    "title": "Track 1",
-    "artist": "Valy",
-    "src": "assets/audio/track1.mp3",
-    "cover": "assets/img/track1.jpg"
-  },
-  {
-    "title": "Track 2",
-    "artist": "Valy",
-    "src": "assets/audio/track2.mp3",
-    "cover": "assets/img/track2.jpg"
+    "title": "Puto",
+    "artist": "Molotov",
+    "src": "Molotov_Puto.mp3",
+    "cover": "assets/img/molotov.jpg"
   }
 ]
